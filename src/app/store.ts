@@ -10,7 +10,7 @@ import {FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, RE
 const persistConfigAuth = {
     key: 'auth',
     storage,
-    whitelist: ['userInfo', 'isLoggedIn']
+    whitelist: ['userInfo', 'isLoggedIn','authorized']
 }
 const persistConfigChat = {
     key: 'chat',

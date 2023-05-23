@@ -1,0 +1,49 @@
+.panel {
+  height: 100%;
+  border-right: 1px solid rgb(186, 187, 187);
+  flex: 0 0 30%;
+  position: relative;
+
+  .header {
+    height: 59px;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .button {
+    height: 49px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(233, 237, 239);
+    padding: 0 20px;
+  }
+
+  .chats {
+    height: calc(100vh - 148px);
+    overflow: auto;
+
+    .list {
+      height: 100%;
+
+      .chatItem {
+        border-bottom: 1px solid rgb(233, 237, 239);
+        height: 72px;
+        padding: 8px 20px;
+
+        .text {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &:hover {
+          background-color: #f6f8fa;
+          cursor: pointer
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.containerChat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 59px;
+    background: #f0f2f5;
+    padding: 0 20px;
+  }
+
+  .chat {
+    background: #efeae2;
+    height: calc(100vh - 158px);
+    overflow: auto;
+    .wrapper {
+      height: 100%;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      overflow: auto;
+      .containerMessages {
+        padding: 20px 5% 20px 5%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 10px;
+        bottom: 0;
+        .message {
+          max-width: 70%;
+          position: relative;
+          padding: 5px 45px 10px 10px;
+          border-radius: 7.5px;
+          box-shadow: 0 1px .5px rgba(11,20,26,.13);
+          .text {
+            font-size: 14px;
+          }
+
+          .date {
+            font-size: 11px;
+            position: absolute;
+            bottom: 6px;
+            right: 10px;
+            color: #667781;
+          }
+          &:before{
+            top: 0;
+            content: "";
+            display: block;
+            height: 10px;
+            position: absolute;
+            width: 15px;
+          }
+        }
+        .me{
+          background: #d9fdd3;
+          margin-right: 10px;
+          align-self: flex-end;
+          &:before{
+            background: linear-gradient(to right bottom, #d9fdd3 50%, transparent  50%);;
+            right: -10px;
+          }
+        }
+        .other{
+          background: white;
+          margin-left: 10px;
+          align-self: flex-start;
+          &:before{
+            background: linear-gradient(to bottom left, #ffffff 50%, transparent  50%);;
+            left: -10px;
+          }
+        }
+      }
+    }
+  }
+
+  .inputPanel {
+    height: 59px;
+    background: #f0f2f5;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .input {
+      height: 40px;
+      flex-grow: 1;
+      border: 1px solid white;
+      border-radius: 8px;
+      padding: 9px 12px;
+      outline: none;
+    }
+  }
+}

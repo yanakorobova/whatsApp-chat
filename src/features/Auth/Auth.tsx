@@ -16,8 +16,7 @@ export const Auth = () => {
     if (authorized === 'authorized') {
         return <Navigate to={'/chats'}/>
     }
-    console.log((authorized && authorized !== 'authorized' ? 'Что-то пошло не так... Проверьте свой аккаунт'
-        : error? error : ''))
+    
     const errorMessage =  (authorized && authorized !== 'authorized' ? 'Что-то пошло не так... Проверьте свой аккаунт'
         : error? 'Неверный idInstance или apiTokenInstance' : '')
 
